@@ -1,4 +1,4 @@
-# NexusDocs 🚀
+# NexusDocs 
 
 **Enterprise-Grade Advanced RAG Architecture for Engineering Post-Mortems**
 
@@ -6,7 +6,7 @@ NexusDocs est un moteur de recherche et de question-réponse (RAG) ultra-optimis
 
 Cette V2 introduit une architecture robuste intégrant l'ingestion incrémentale, le pre-filtering par LLM, la fusion RRF, le reranking et le cache sémantique.
 
-## 🧠 Architecture Core Features
+##  Architecture Core Features
 
 ### 1. Smart Ingestion & Metadata Extraction
 * **Hierarchical Chunking** : Découpage intelligent.
@@ -23,9 +23,9 @@ Cette V2 introduit une architecture robuste intégrant l'ingestion incrémentale
 
 ### 3. Re-ranking & Generation
 * **Cross-Encoder Re-ranking** : Utilisation de `ms-marco-MiniLM-L-6-v2` pour scorer les paires issues du RRF.
-* **Grounded Generation** : LLM Gemini 1.5 Flash avec prompt strict anti-hallucination.
+* **Grounded Generation** : LLM Gemini 3.5 Flash Lite avec prompt strict anti-hallucination.
 
-## 🛠 Tech Stack
+##  Tech Stack
 * **Backend** : FastAPI (Asynchrone), Python 3.11
 * **Orchestration RAG** : LangChain
 * **Vector Store** : ChromaDB (Persistent)
@@ -33,7 +33,7 @@ Cette V2 introduit une architecture robuste intégrant l'ingestion incrémentale
 * **Embeddings & LLM** : Google Gemini API
 * **Infrastructure** : Docker & Docker Compose
 
-## 📊 LLMOps & Évaluation (RAGAS)
+##  LLMOps & Évaluation (RAGAS)
 Pour garantir l'absence d'hallucinations et la pertinence du retrieval, le système est évalué objectivement avec le framework **Ragas** (LLM-as-a-Judge) sur 4 métriques clés :
 - **Faithfulness** : Vérifie que la réponse générée ne contient aucune information inventée par rapport aux chunks récupérés.
 - **Answer Relevancy** : Évalue si la réponse répond directement à la question sans hors-sujet.
@@ -42,7 +42,7 @@ Pour garantir l'absence d'hallucinations et la pertinence du retrieval, le syst�
 
 Un script d'évaluation est disponible dans `scripts/evaluate_rag.py`.
 
-## 🚀 Quickstart
+##  Quickstart
 ```bash
 git clone [https://github.com/](https://github.com/housstou/NexusDocs.git)
 cd NexusDocs
