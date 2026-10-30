@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+chroma_db/
+temp_uploads/
+.pytest_cache/

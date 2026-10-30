@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  nexusdocs-api:
+    build: .
+    container_name: nexusdocs_rag
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CHROMA_PERSIST_DIR=/app/chroma_db
+      - REDIS_URL=redis://redis-cache:6379/0
+    volumes:
+      - chroma_data:/app/chroma_db
+    depends_on:
+      - redis-cache
+    restart: unless-stopped
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: nexusdocs_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
