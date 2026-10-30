@@ -44,7 +44,7 @@ Un script d'évaluation est disponible dans `scripts/evaluate_rag.py`.
 
 ##  Quickstart
 ```bash
-git clone [https://github.com/](https://github.com/housstou/NexusDocs.git)
+git clone https://github.com/housstou/NexusDocs.git
 cd NexusDocs
 cp .env.example .env
 # Ajouter GEMINI_API_KEY dans le .env
